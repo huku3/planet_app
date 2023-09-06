@@ -11,7 +11,7 @@ class UpdatePlanetRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,11 @@ class UpdatePlanetRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+
+            '名前' => 'required|string|max:50',
+            '英名' => 'required|string|max:50',
+            '半径' => 'required|string|max:50',
+            '重量' => 'required|string|max:50',
         ];
     }
 }
