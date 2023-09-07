@@ -179,7 +179,7 @@ return [
         'minute'                   => '分',
         'mobile'                   => 'モバイル',
         'month'                    => '月',
-        'name'                     => '名前',
+        'name'                     => 'pla_name',
         'national_code'            => '国コード',
         'number'                   => '番号',
         'password'                 => 'パスワード',
@@ -213,5 +213,9 @@ return [
         'updated_at'               => '更新日',
         'username'                 => 'ユーザー名',
         'year'                     => '年',
+        'pla_name'                 => '名前',
+        'pla_eng_name'             => '名前(英名)',
+        'radius'                   => '半径',
+        'weight'                   => '重量',
     ],
 ];

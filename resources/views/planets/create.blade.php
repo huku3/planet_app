@@ -27,20 +27,20 @@
     <form action="/planets" method="post">
         @csrf
         <p>
-            <label for="名前">名前</label><br>
-            <input type="string" name="名前" value="{{ old('名前') }}">
+            <label for="pla_name">名前</label><br>
+            <input type="string" name="pla_name" value="{{ old('pla_name') }}">
         </p>
         <p>
-            <label for="名前(英語)">名前(英語)</label><br>
-            <input type="string" name="英名" value="{{ old('英名') }}">
+            <label for="pla_name(英語)">名前（英名）</label><br>
+            <input type="string" name="pla_eng_name" value="{{ old('pla_eng_name') }}">
         </p>
         <p>
-            <label for="半径">半径</label><br>
-            <input type="number" name="半径" value="{{ old('半径') }}">
+            <label for="radius">半径</label><br>
+            <input type="number" name="radius" value="{{ old('radius') }}">
         </p>
         <p>
-            <label for="重量">重量</label><br>
-            <input type="number" name="重量" value="{{ old('重量') }}">
+            <label for="weight">重量</label><br>
+            <input type="number" name="weight" value="{{ old('weight') }}">
         </p>
 
         <input type="submit" value="登録">

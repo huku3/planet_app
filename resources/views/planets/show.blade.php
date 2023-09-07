@@ -6,53 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>planet 詳細</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-       
-
-        a {
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
     <h1>詳細画面</h1>
-
-    <table>
+    <table class="table">
         <tr>
-            <th>名前</th>
-            <td>{{ $planet->名前 }}</td>
+            <th class="th">名前</th>
+            <td class="td">{{ $planet->pla_name }}</td>
         </tr>
         <tr>
-            <th>英名</th>
-            <td>{{ $planet->英名 }}</td>
+            <th class="th">名前（英名）</th>
+            <td class="td">{{ $planet->pla_eng_name }}</td>
         </tr>
         <tr>
-            <th>半径</th>
-            <td>{{ $planet->半径 }}</td>
+            <th class="th">半径</th>
+            <td class="td">{{ $planet->radius }}</td>
         </tr>
         <tr>
-            <th>重量</th>
-            <td>{{ $planet->重量 }}</td>
+            <th class="th">重量</th>
+            <td class="td">{{ $planet->weight }}</td>
         </tr>
     </table>
-
-    <a href="/planets">戻る</a>
+    <a class="a" href="/planets">戻る</a>
 </body>
 
 </html>

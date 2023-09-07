@@ -22,10 +22,10 @@ class StorePlanetRequest extends FormRequest
     public function rules(): array
     {
         return [
-            '名前' => 'required|string|max:50',
-            '英名' => 'required|string|max:50',
-            '半径' => 'required|string|max:50',
-            '重量' => 'required|string|max:50',
+            'pla_name' => 'required|string|max:50',
+            'pla_eng_name' => 'required|string|max:50',
+            'radius' => 'required|string|max:50',
+            'weight' => 'required|string|max:50',
         ];
     }
 }

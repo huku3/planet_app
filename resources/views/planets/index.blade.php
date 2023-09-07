@@ -6,53 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>planet 一覧</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-        th,
-        td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
 </head>
 
 <body>
     <h1>一覧画面</h1>
-    <table>
+    <table class="table">
         <thead>
             <tr>
-                <th>名前</th>
-                <th>英名</th>
-                <th>半径</th>
-                <th>重量</th>
-                <th>アクション</th>
+                <th class="th">名前</th>
+                <th class="th">名前（英名）</th>
+                <th class="th">半径</th>
+                <th class="th">半径</th>
+                <th class="th"></th>
+                <th class="th"></th>
+                <th class="th"></th>
+
             </tr>
         </thead>
         <tbody>
             @foreach ($planets as $planet)
                 <tr>
-                    <td>{{ $planet->名前 }}</td>
-                    <td>{{ $planet->英名 }}</td>
-                    <td>{{ $planet->半径 }}</td>
-                    <td>{{ $planet->重量 }}</td>
-                    <td>
-                        <a href="/planets/{{ $planet->id }}">詳細</a>
-                        <a href="/planets/{{ $planet->id }}/edit">編集</a>
-                        <form action="/planets/{{ $planet->id }}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};">
-                        </form>
-                    </td>
+                    <td class="td">{{ $planet->pla_name }}</td>
+                    <td class="td">{{ $planet->pla_eng_name }}</td>
+                    <td class="td">{{ $planet->radius }}</td>
+                    <td class="td">{{ $planet->weight }}</td>
+                    <td class="td"><a href="/planets/{{ $planet->id }}">詳細</a></td>
+                    <td class="td"><a href="/planets/{{ $planet->id }}/edit">編集</a></td>
+                    <form action="/planets/{{ $planet->id }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <td><input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};"></td>
+                    </form>
                 </tr>
             @endforeach
         </tbody>
